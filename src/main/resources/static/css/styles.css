@@ -122,6 +122,7 @@ body {
 .nav-link:hover::after { width: 100%; }
 .nav-link.active        { color: var(--brand); }
 .nav-link.active::after { width: 100%; }
+.nav-link:focus-visible { color: #fff; outline: 2px solid rgba(255,255,255,0.4); outline-offset: 4px; border-radius: 2px; }
 
 .nav-toggle {
     display: none;
@@ -180,6 +181,16 @@ body {
     transform: translateY(-1px);
 }
 
+.btn-brand:active {
+    transform: translateY(0);
+    box-shadow: none;
+}
+
+.btn-brand:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
+}
+
 .btn-ghost {
     display: inline-block;
     color: var(--text);
@@ -197,6 +208,13 @@ body {
     background: rgba(255, 255, 255, 0.04);
 }
 
+.btn-ghost:active { background: rgba(255, 255, 255, 0.08); }
+
+.btn-ghost:focus-visible {
+    outline: 2px solid rgba(255, 255, 255, 0.5);
+    outline-offset: 3px;
+}
+
 .btn-ghost-sm {
     display: inline-block;
     color: #9ca3af;
@@ -207,6 +225,7 @@ body {
 }
 
 .btn-ghost-sm:hover { color: #fff; }
+.btn-ghost-sm:focus-visible { outline: 2px solid rgba(255,255,255,0.4); outline-offset: 3px; border-radius: 2px; }
 
 .btn--lg  { font-size: 0.95rem; padding: 0.875rem 2rem; }
 .btn--cta { font-size: 1rem;    padding: 1rem 2.5rem; }
@@ -270,7 +289,7 @@ body {
     background-position: center 40%;
     filter: brightness(0.28) saturate(0.8);
     transform: scale(1.04);
-    transition: transform 10s ease;
+    transition: transform 2s ease;
 }
 
 .hero-bg.loaded { transform: scale(1); }
@@ -406,6 +425,14 @@ body {
     transform: translateY(-4px);
 }
 
+.service-card:hover .service-icon {
+    background: rgba(25, 181, 254, 0.18);
+}
+
+.service-card:focus-within {
+    border-color: rgba(25, 181, 254, 0.25);
+}
+
 .service-icon {
     width: 44px;
     height: 44px;
@@ -520,7 +547,12 @@ body {
     height: 100%;
     object-fit: cover;
     filter: brightness(0.65) saturate(0.9);
-    transition: transform 0.7s ease, filter 0.4s ease;
+    transition: transform 0.4s ease, filter 0.3s ease;
+}
+
+.work-card:focus-visible {
+    outline: 2px solid var(--brand);
+    outline-offset: 3px;
 }
 
 .work-card:hover img {
@@ -547,7 +579,7 @@ body {
 
 .work-card p {
     font-size: 0.8125rem;
-    color: #9ca3af;
+    color: var(--text-sub);
     margin: 0;
 }
 
@@ -631,7 +663,7 @@ footer nav {
 
 footer nav a {
     font-size: 0.8125rem;
-    color: var(--text-faint);
+    color: var(--text-muted);
     text-decoration: none;
     transition: color 0.2s ease;
 }
@@ -640,7 +672,7 @@ footer nav a:hover { color: #fff; }
 
 footer small {
     font-size: 0.75rem;
-    color: #374151;
+    color: var(--text-faint);
 }
 
 /* ═══════════════════════════════════════ PAGE HEADER (inner pages) */

@@ -5,8 +5,18 @@
 
     if (!form) return;
 
+    const submitBtn = form.querySelector('[type="submit"]');
+
+    function disableSubmit() {
+        if (submitBtn) {
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Sending…';
+        }
+    }
+
     form.addEventListener('submit', function (e) {
         e.preventDefault();
+        disableSubmit();
 
         if (siteKeyEl && typeof grecaptcha !== 'undefined') {
             grecaptcha.ready(() => {

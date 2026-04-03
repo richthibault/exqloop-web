@@ -37,7 +37,8 @@
                            th:classappend="${#fields.hasErrors('email')} ? 'error'"
                            class="form-input"
                            placeholder="you@example.com"
-                           autocomplete="email"/>
+                           autocomplete="email"
+                           required/>
                     <span class="form-error" th:if="${#fields.hasErrors('email')}" th:errors="*{email}"></span>
                 </div>
 
@@ -47,7 +48,8 @@
                               th:field="*{message}"
                               th:classappend="${#fields.hasErrors('message')} ? 'error'"
                               class="form-textarea"
-                              placeholder="Tell us about your project — what you're building, what problem you're solving, and any relevant timeline or budget context."></textarea>
+                              placeholder="Tell us about your project — what you're building, what problem you're solving, and any relevant timeline or budget context."
+                              required></textarea>
                     <span class="form-error" th:if="${#fields.hasErrors('message')}" th:errors="*{message}"></span>
                 </div>
 
