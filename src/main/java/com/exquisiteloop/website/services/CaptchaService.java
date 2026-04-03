@@ -31,10 +31,10 @@ public class CaptchaService {
 	// @Value("${google.project.id:}")
 	// String googleProjectId;
 
-	// @Value("${google.recaptcha.sitekey:}")
+	// @Value("${google.recaptcha.key.site:}")
 	// String siteKey;
 
-	@Value("${google.recaptcha.key:}")
+	@Value("${google.recaptcha.key.secret:}")
 	String secretKey;
 
 	private static Pattern RESPONSE_PATTERN = Pattern.compile("[A-Za-z0-9_-]+");

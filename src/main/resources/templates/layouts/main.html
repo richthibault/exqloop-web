@@ -93,8 +93,8 @@
     </script>
     </th:block>
 
-    <th:block th:if="${!#strings.isEmpty(googleRecaptchaKey)}">
-    <script th:src="@{https://www.google.com/recaptcha/api.js(render=${googleRecaptchaKey})}"></script>
+    <th:block th:if="${!#strings.isEmpty(googleRecaptchaSiteKey)}">
+    <script th:src="@{https://www.google.com/recaptcha/api.js(render=${googleRecaptchaSiteKey})}"></script>
     </th:block>
 
     <script th:src="@{/js/globals.js}"></script>

@@ -55,8 +55,8 @@
 
                 <button type="submit" class="btn-brand btn--cta">Send Message</button>
 
-				<th:block  th:if="${!#strings.isEmpty(googleRecaptchaKey)}">
-					<input type="hidden" id="recaptchaSiteKey" th:value="${googleRecaptchaKey}">
+				<th:block  th:if="${!#strings.isEmpty(googleRecaptchaSiteKey)}">
+					<input type="hidden" id="recaptchaSiteKey" th:value="${googleRecaptchaSiteKey}">
 					<input type="hidden" id="g-recaptcha-response" name="g-recaptcha-response">
 
 					<p class="recaptcha-notice">

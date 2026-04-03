@@ -10,17 +10,17 @@ public class BaseController {
 	@Value("${google.analytics.id:}")
 	String googleAnalyticsId;
 
-	@Value("${google.recaptcha.key:}")
-	String googleRecaptchaKey;
+	@Value("${google.recaptcha.key.site:}")
+	String googleRecaptchaSiteKey;
 
 	@ModelAttribute("googleAnalyticsId")
 	public String getGoogleAnalyticsId() {
 		return googleAnalyticsId;
 	}
 
-	@ModelAttribute("googleRecaptchaKey")
-	public String getGoogleRecaptchaKey() {
-		return googleRecaptchaKey;
+	@ModelAttribute("googleRecaptchaSiteKey")
+	public String getGoogleRecaptchaSiteKey() {
+		return googleRecaptchaSiteKey;
 	}
 
 }
