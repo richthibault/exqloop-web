@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Exquisite Loop — Bespoke Software for Modern Business</title>
+    <th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+<body>
+
+<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+<!-- ════════════════════════════════════════════ HERO -->
+<section class="hero">
+    <div class="hero-bg" id="hero-bg"></div>
+    <div class="hero-grid"></div>
+    <div class="hero-vignette"></div>
+
+    <div class="hero-content">
+        <div class="hero-body">
+            <span class="eyebrow">Exquisite Loop LLC</span>
+            <h1 class="serif">
+                Software built<br>
+                with <em>intention.</em>
+            </h1>
+            <p>Bespoke web and mobile applications, crafted from first principles for businesses that expect more from their technology.</p>
+            <div class="btn-group">
+                <a href="/portfolio" class="btn-brand btn--lg">View Our Work</a>
+                <a href="/contact" class="btn-ghost btn--lg">Let's Talk &rarr;</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="scroll-hint">
+        <span>Scroll</span>
+        <div class="scroll-hint-line"></div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════ MARQUEE -->
+<div class="marquee-wrap">
+    <div class="marquee-track">
+        <span class="eyebrow">Web Applications</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Mobile Development</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">AI/LLM Integrations</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">API &amp; Integrations</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Business Automation</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">UX &amp; Product Design</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Cloud Architecture</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Spring Boot</span>
+        <span class="marquee-sep">&#8231;</span>
+        <!-- Mirror set for seamless loop -->
+        <span class="eyebrow">Web Applications</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Mobile Development</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">AI/LLM Integrations</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">API &amp; Integrations</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Business Automation</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">UX &amp; Product Design</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Cloud Architecture</span>
+        <span class="marquee-sep">&#8231;</span>
+        <span class="eyebrow">Spring Boot</span>
+        <span class="marquee-sep">&#8231;</span>
+    </div>
+</div>
+
+
+<!-- ════════════════════════════════════════════ SERVICES -->
+<section class="services">
+    <div class="container">
+
+        <div class="section-header">
+            <span class="eyebrow">What We Build</span>
+            <h2 class="serif">Tailored solutions,<br>not templates.</h2>
+        </div>
+
+        <div class="card-grid">
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="serif">Web Applications</h3>
+                <p>Robust, scalable web apps engineered to your exact specifications — from complex internal tools to polished customer-facing platforms.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="serif">Mobile Development</h3>
+                <p>Native and cross-platform apps that feel at home on any device. Intuitive interfaces your team and customers will enjoy using every day.</p>
+            </div>
+
+            <div class="service-card">
+                <div class="service-icon">
+                    <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" stroke-width="1.5">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M8 9l3 3-3 3m5 0h3M5 20h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/>
+                    </svg>
+                </div>
+                <h3 class="serif">Systems &amp; Integration</h3>
+                <p>APIs, data pipelines, and business automation that connect your systems and streamline operations — infrastructure that just works.</p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════ PHILOSOPHY / ABOUT -->
+<section class="philosophy">
+    <div class="container">
+        <div class="about-grid">
+
+            <div class="about-frame">
+                <img th:src="@{/img/workbench.jpg}" alt="The Exquisite Loop workspace"/>
+            </div>
+
+            <div class="about-text">
+                <span class="eyebrow">Our Philosophy</span>
+                <div class="accent-line"></div>
+                <h2 class="serif">
+                    Great software has<br>
+                    <em>elegant structure</em><br>
+                    underneath.
+                </h2>
+                <p>Like the fibonacci spiral hidden in every nautilus shell, truly lasting software emerges from careful, principled decisions — not shortcuts. We take time to understand your business before writing a single line of code.</p>
+                <p>Exquisite Loop is a boutique practice. That means you work directly with an experienced engineer who is invested in your outcome — not a rotating cast of contractors.</p>
+                <a href="/about" class="btn-ghost-sm">About Us &rarr;</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+<!-- ════════════════════════════════════════════ SELECTED WORK -->
+<!--/* Uncomment when portfolio content is ready
+<section class="work">
+    <div class="container">
+        <div class="section-header">
+            <span class="eyebrow">Selected Work</span>
+            <h2 class="serif">Built to last.</h2>
+        </div>
+        <div class="card-grid">
+            <a href="/portfolio" class="work-card">
+                <img th:src="@{/img/wall.jpg}" alt="Operations Dashboard"/>
+                <div class="work-overlay">
+                    <span class="work-tag">Web Application</span>
+                    <h3 class="serif">Operations Dashboard</h3>
+                    <p>Custom internal tooling for a logistics firm</p>
+                </div>
+            </a>
+            <a href="/portfolio" class="work-card">
+                <img th:src="@{/img/shell2.jpg}" alt="Field Service Manager"/>
+                <div class="work-overlay">
+                    <span class="work-tag">Mobile App</span>
+                    <h3 class="serif">Field Service Manager</h3>
+                    <p>iOS &amp; Android app for field technicians</p>
+                </div>
+            </a>
+            <a href="/portfolio" class="work-card">
+                <img th:src="@{/img/jug.jpg}" alt="Inventory Sync Platform"/>
+                <div class="work-overlay">
+                    <span class="work-tag">Integration</span>
+                    <h3 class="serif">Inventory Sync Platform</h3>
+                    <p>Real-time ERP and e-commerce integration</p>
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+*/-->
+
+
+<!-- ════════════════════════════════════════════ CTA -->
+<section class="cta-section">
+    <div class="cta-content">
+        <span class="eyebrow">Let's Work Together</span>
+        <h2 class="serif">
+            Ready to build something<br>
+            <em>exceptional?</em>
+        </h2>
+        <p>Every great product starts with a conversation. Tell us about your project — we'd love to hear what you're trying to build.</p>
+        <a href="/contact" class="btn-brand btn--cta">Start the Conversation</a>
+    </div>
+</section>
+
+<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+<script th:src="@{/js/home.js}"></script>
+
+</body>
+</html>

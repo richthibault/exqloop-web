@@ -43,3 +43,7 @@ target/
 .mvn/
 mvnw
 mvnw.cmd
+
+.DS_Store
+application-local.properties
+.env

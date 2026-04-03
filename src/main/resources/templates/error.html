@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Error — Exquisite Loop</title>
+    <th:block th:replace="~{layouts/main :: headtags}"></th:block>
+</head>
+<body>
+
+<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+<section class="error-page">
+    <div class="container">
+
+        <div class="error-code serif" th:text="${status}">???</div>
+
+        <!-- 404 -->
+        <div th:if="${status == 404}">
+            <h1 class="serif error-headline">We looked everywhere.<br><em>Even the loops.</em></h1>
+            <p class="error-body">The page at <code class="error-path" th:text="${path}"></code> was never built, or it moved without leaving a forwarding address. Either way, it's not here.</p>
+        </div>
+
+        <!-- 500 -->
+        <div th:if="${status == 500}">
+            <h1 class="serif error-headline">Looks like one of our loops…<br><em>got a little loopy.</em></h1>
+            <p class="error-body">An error occurred on our end. Our engineers have been notified and are already overthinking the fix. Please try again in a moment.</p>
+        </div>
+
+        <!-- 403 -->
+        <div th:if="${status == 403}">
+            <h1 class="serif error-headline">You weren't supposed<br><em>to see this.</em></h1>
+            <p class="error-body">Access denied. If you believe this is a mistake, get in touch and we'll sort it out.</p>
+        </div>
+
+        <!-- Catch-all -->
+        <div th:if="${status != 404 and status != 500 and status != 403}">
+            <h1 class="serif error-headline">Something went<br><em>sideways.</em></h1>
+            <p class="error-body">We're not entirely sure what happened here, but we're on it. In the meantime, head back to somewhere that works.</p>
+        </div>
+
+        <div class="btn-group">
+            <a href="/" class="btn-brand">Take Me Home</a>
+            <a href="/contact" class="btn-ghost">Contact Us</a>
+        </div>
+
+    </div>
+</section>
+
+<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
+</body>
+</html>

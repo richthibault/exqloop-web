@@ -1,175 +1,144 @@
 <!DOCTYPE html>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About Us - Exquisite Loop</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" th:href="@{/css/styles.css}">
+    <title>About — Exquisite Loop</title>
+    <th:block th:replace="~{layouts/main :: headtags}"></th:block>
 </head>
-<body class="min-h-screen flex flex-col bg-gray-50">
-    <!-- Navigation -->
-    <nav class="bg-white shadow-md sticky top-0 z-50">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex justify-between items-center h-16">
-                <div class="flex items-center">
-                    <a href="/" class="text-2xl font-bold text-gray-800">
-                        Exquisite Loop
-                    </a>
-                </div>
-                <div class="hidden md:flex space-x-8">
-                    <a th:href="@{/about}" 
-                       class="nav-link active text-purple-600 font-medium">About Us</a>
-                    <a th:href="@{/portfolio}" 
-                       class="nav-link text-gray-600 hover:text-purple-600 font-medium">Portfolio</a>
-                    <a th:href="@{/contact}" 
-                       class="nav-link text-gray-600 hover:text-purple-600 font-medium">Contact Us</a>
-                </div>
-                <div class="md:hidden">
-                    <button id="mobile-menu-button" class="text-gray-600 hover:text-purple-600 focus:outline-none">
-                        <svg class="h-6 w-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"></path>
-                        </svg>
-                    </button>
-                </div>
+<body>
+
+<th:block th:replace="~{layouts/main :: header}"></th:block>
+
+<!-- ════════════════════════════════════════════ PAGE HEADER -->
+<section class="page-header">
+    <div class="container">
+        <span class="eyebrow">About</span>
+        <h1 class="serif">Our story.</h1>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════ INTRO -->
+<section class="about-intro">
+    <div class="container">
+        <div class="about-intro-grid">
+
+            <div class="about-intro-text">
+                <p class="about-lead">Exquisite Loop is an independent collective of senior software engineers and architects who design and build thoughtful web, mobile, and cloud systems for growing organizations.</p>
+                <p>We bring more than 30 years of real-world software experience to every project, helping companies turn complex business needs into elegant, reliable tools that people actually enjoy using.</p>
+                <p>Our work lives at the intersection of clarity and capability: powerful systems with intuitive interfaces, built to scale, integrate, and endure.</p>
+                <p>We specialize in ecommerce platforms, internal business systems, and custom applications that empower employees, partners, and customers through well-designed technology.</p>
             </div>
+
+            <div class="about-intro-image">
+                <img th:src="@{/img/jug.jpg}" alt="Craft and precision"/>
+            </div>
+
         </div>
-        <!-- Mobile menu -->
-        <div id="mobile-menu" class="hidden md:hidden bg-white border-t">
-            <div class="px-2 pt-2 pb-3 space-y-1">
-                <a th:href="@{/about}" class="block px-3 py-2 text-purple-600 bg-purple-50 rounded-md font-medium">About Us</a>
-                <a th:href="@{/portfolio}" class="block px-3 py-2 text-gray-600 hover:text-purple-600 hover:bg-gray-50 rounded-md">Portfolio</a>
-                <a th:href="@{/contact}" class="block px-3 py-2 text-gray-600 hover:text-purple-600 hover:bg-gray-50 rounded-md">Contact Us</a>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════ CAPABILITIES -->
+<section class="about-capabilities">
+    <div class="container">
+        <div class="capabilities-grid">
+
+            <div class="capability-column">
+                <span class="eyebrow">What We Do Best</span>
+                <h3 class="serif">Core services</h3>
+                <ul class="feature-list">
+                    <li>Custom web applications and platforms</li>
+                    <li>Native and cross-platform mobile applications</li>
+                    <li>Ecommerce and payment integrations</li>
+                    <li>Internal tools and back-office automation</li>
+                    <li>Secure identity and single sign-on systems</li>
+                    <li>Cloud-native infrastructure on AWS and Azure</li>
+                    <li>API design and systems integration</li>
+                </ul>
             </div>
+
+            <div class="capability-column">
+                <span class="eyebrow">Practical AI Integration</span>
+                <h3 class="serif">AI that works</h3>
+                <p class="capability-intro">AI is most valuable when it's embedded into real workflows. We design and implement:</p>
+                <ul class="feature-list">
+                    <li>Intelligent chat assistants trained on your company's knowledge</li>
+                    <li>Retrieval-Augmented Generation (RAG) systems over internal documents and data</li>
+                    <li>AI-powered support, onboarding, and search experiences</li>
+                    <li>Automation of repetitive back-office tasks using language models</li>
+                    <li>Secure, private AI integrations that respect your data boundaries</li>
+                </ul>
+                <p class="capability-tagline">Not demos. Not experiments. Working tools your team can use on day one.</p>
+            </div>
+
         </div>
-    </nav>
+    </div>
+</section>
 
-    <!-- Main Content -->
-    <main class="flex-grow">
-        <!-- Hero Section -->
-        <div class="hero-gradient text-white py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold mb-6">About Exquisite Loop</h1>
-                <p class="text-xl md:text-2xl max-w-3xl mx-auto">
-                    Full-stack web and mobile application development for the modern business
-                </p>
-            </div>
-        </div>
+<!-- ════════════════════════════════════════════ TECH + INDUSTRIES -->
+<section class="about-tech">
+    <div class="container">
+        <div class="tech-grid">
 
-        <!-- About Content -->
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
-            <div class="grid md:grid-cols-2 gap-12 items-center mb-16">
-                <div>
-                    <h2 class="text-3xl font-bold text-gray-900 mb-6">Who We Are</h2>
-                    <p class="text-lg text-gray-700 mb-4">
-                        Exquisite Loop provides full-stack web and mobile application development for the modern business. 
-                        Our primary focus is on Java/Spring web applications, complemented by native iPhone and Android 
-                        mobile applications.
-                    </p>
-                    <p class="text-lg text-gray-700">
-                        We are a team of experienced developers dedicated to delivering high-quality, scalable solutions 
-                        that meet the unique needs of each client. Our expertise spans the entire development lifecycle, 
-                        from initial concept to deployment and maintenance.
-                    </p>
-                </div>
-                <div class="bg-gradient-to-br from-purple-600 to-indigo-600 rounded-lg p-8 text-white">
-                    <h3 class="text-2xl font-bold mb-4">Our Mission</h3>
-                    <p class="text-lg">
-                        To empower businesses with cutting-edge technology solutions that drive growth, 
-                        enhance efficiency, and create exceptional user experiences.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Services -->
-            <div class="mb-16">
-                <h2 class="text-3xl font-bold text-gray-900 text-center mb-12">Our Services</h2>
-                <div class="grid md:grid-cols-3 gap-8">
-                    <div class="bg-white rounded-lg p-8 card-shadow">
-                        <div class="text-purple-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Web Development</h3>
-                        <p class="text-gray-700">
-                            Modern, responsive web applications built with Java/Spring Boot, ensuring 
-                            scalability, security, and performance.
-                        </p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-8 card-shadow">
-                        <div class="text-purple-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Mobile Development</h3>
-                        <p class="text-gray-700">
-                            Native iOS and Android applications that deliver seamless user experiences 
-                            across all devices.
-                        </p>
-                    </div>
-
-                    <div class="bg-white rounded-lg p-8 card-shadow">
-                        <div class="text-purple-600 mb-4">
-                            <svg class="w-12 h-12" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" 
-                                      d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
-                            </svg>
-                        </div>
-                        <h3 class="text-xl font-bold text-gray-900 mb-3">Full-Stack Solutions</h3>
-                        <p class="text-gray-700">
-                            End-to-end development services covering backend, frontend, database design, 
-                            and API integration.
-                        </p>
-                    </div>
+            <div class="tech-column">
+                <span class="eyebrow">Core Technologies</span>
+                <p class="tech-intro">Our toolbox is broad, but we choose technology deliberately based on what fits the problem.</p>
+                <div class="tag-grid">
+                    <span class="tech-tag">Java / Spring</span>
+                    <span class="tech-tag">JavaScript</span>
+                    <span class="tech-tag">iOS (Swift / Obj-C)</span>
+                    <span class="tech-tag">Android</span>
+                    <span class="tech-tag">RESTful APIs</span>
+                    <span class="tech-tag">Event-driven systems</span>
+                    <span class="tech-tag">SAML / SSO</span>
+                    <span class="tech-tag">AWS</span>
+                    <span class="tech-tag">Microsoft Azure</span>
+                    <span class="tech-tag">Stripe / PayPal</span>
+                    <span class="tech-tag">HTML &amp; CSS</span>
                 </div>
             </div>
 
-            <!-- Technology Stack -->
-            <div class="bg-white rounded-lg p-8 card-shadow">
-                <h2 class="text-3xl font-bold text-gray-900 text-center mb-8">Technology Stack</h2>
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-6 text-center">
-                    <div class="p-4">
-                        <div class="text-4xl mb-2">☕</div>
-                        <p class="font-semibold text-gray-800">Java</p>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-4xl mb-2">🍃</div>
-                        <p class="font-semibold text-gray-800">Spring Boot</p>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-4xl mb-2">🍎</div>
-                        <p class="font-semibold text-gray-800">iOS</p>
-                    </div>
-                    <div class="p-4">
-                        <div class="text-4xl mb-2">🤖</div>
-                        <p class="font-semibold text-gray-800">Android</p>
-                    </div>
+            <div class="tech-column">
+                <span class="eyebrow">Industries We Know Well</span>
+                <p class="tech-intro">Over the years, we've built systems for organizations in:</p>
+                <div class="tag-grid">
+                    <span class="tech-tag">Finance &amp; compliance</span>
+                    <span class="tech-tag">Real estate</span>
+                    <span class="tech-tag">E-learning &amp; SCORM</span>
+                    <span class="tech-tag">Art &amp; photography commerce</span>
+                    <span class="tech-tag">Social platforms</span>
+                    <span class="tech-tag">Back-office automation</span>
                 </div>
             </div>
-        </div>
-    </main>
 
-    <!-- Footer -->
-    <footer>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="text-center">
-                <p class="text-sm">&copy; 2025 Exquisite Loop. All rights reserved.</p>
-                <p class="text-sm mt-2">Full-stack web and mobile application development for the modern business.</p>
+        </div>
+    </div>
+</section>
+
+<!-- ════════════════════════════════════════════ HOW WE WORK -->
+<section class="about-approach">
+    <div class="container">
+        <div class="approach-grid">
+
+            <div class="about-frame">
+                <img th:src="@{/img/workbench.jpg}" alt="The Exquisite Loop workspace"/>
             </div>
-        </div>
-    </footer>
 
-    <script>
-        // Mobile menu toggle
-        document.getElementById('mobile-menu-button')?.addEventListener('click', function() {
-            const menu = document.getElementById('mobile-menu');
-            menu.classList.toggle('hidden');
-        });
-    </script>
+            <div class="approach-text">
+                <span class="eyebrow">How We Work</span>
+                <div class="accent-line"></div>
+                <h2 class="serif">
+                    Not an agency.<br>
+                    <em>Not a body shop.</em>
+                </h2>
+                <p>We work closely with your team, understand your business deeply, and design systems that solve the right problems the right way.</p>
+                <p>Our size allows us to be responsive, thoughtful, and precise — the way software consulting should be.</p>
+                <a href="/contact" class="btn-brand btn--lg">Start a Conversation</a>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<th:block th:replace="~{layouts/main :: footer}"></th:block>
+
 </body>
 </html>
