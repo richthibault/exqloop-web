@@ -15,6 +15,7 @@
     <groupId>com.exquisiteloop</groupId>
     <artifactId>exqloop-web</artifactId>
     <version>1.0.0</version>
+	<packaging>war</packaging>
     <name>Exquisite Loop Website</name>
     <description>Marketing website for Exquisite Loop web consulting firm</description>
 
