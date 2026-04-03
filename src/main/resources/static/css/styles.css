@@ -4,9 +4,9 @@
 
 :root {
     --brand:       #19B5FE;
-    --bg-base:     #0c0f14;
-    --bg-alt:      #0e1218;
-    --bg-deep:     #080a0e;
+    --bg-base:     rgba(12,  15,  20,  0.89);
+    --bg-alt:      rgba(14,  18,  24,  0.91);
+    --bg-deep:     rgba(8,   10,  14,  0.96);
     --text:        #e2e8f0;
     --text-sub:    #94a3b8;
     --text-muted:  #6b7280;
@@ -21,8 +21,15 @@
 
 /* ═══════════════════════════════════════ BASE */
 
+html {
+    background: #0c0f14; /* solid fallback */
+}
+
 body {
-    background: var(--bg-base);
+    background-image: url('/img/shell1.jpg');
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center 40%;
     color: var(--text);
     font-family: 'Inter', sans-serif;
     margin: 0;
@@ -557,7 +564,7 @@ body {
 /* ═══════════════════════════════════════ CTA */
 
 .cta-section {
-    background: linear-gradient(160deg, #0d1520 0%, #0a1218 50%, #0c1119 100%);
+    background: linear-gradient(160deg, rgba(13,21,32,0.93) 0%, rgba(10,18,24,0.94) 50%, rgba(12,17,25,0.93) 100%);
     border-top: 1px solid rgba(25, 181, 254, 0.1);
     border-bottom: 1px solid rgba(25, 181, 254, 0.1);
     padding: 6rem 0 7rem;
